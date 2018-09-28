@@ -1,0 +1,7 @@
+version: '2'
+services:
+    api:
+        ports:
+            - 8084:80
+        networks:
+            - default

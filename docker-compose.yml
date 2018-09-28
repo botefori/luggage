@@ -1,0 +1,26 @@
+version: '2'
+services:
+    proxy:
+        image: jwilder/nginx-proxy
+        container_name: luggage-proxy
+        ports:
+          - "80:80"
+        volumes:
+          - /var/run/docker.sock:/tmp/docker.sock:ro
+        networks:
+          - default
+
+
+    api:
+        build: docker/api
+        image: luggage/api
+        container_name: luggage-api
+        volumes:
+            - ./api:/var/www/html
+        environment:
+            VIRTUAL_HOST: luggage.api.docker
+networks:
+    default: {}
+
+volumes:
+    database: {}

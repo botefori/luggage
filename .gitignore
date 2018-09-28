@@ -1,0 +1,9 @@
+.DS_Store
+
+.idea
+api/composer.lock
+.idea/workspace.xml
+docker-compose.override.yml
+api/data
+api/logs
+api/vendor

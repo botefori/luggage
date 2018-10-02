@@ -20,5 +20,11 @@
         "phpunit/phpunit": "~3.7.0",
         "guzzle/guzzle": "~3.7"
     },
+    "autoload" : {
+        "psr-0": {
+            "Provider\\Luggage": "src/"
+        }
+    },
+
     "license": "MIT"
 }
